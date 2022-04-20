@@ -1,0 +1,36 @@
+$primary:  #10aeb6;
+$secondary: #f5f5f5;
+
+// 변경하고싶다면
+$utilities : () !default; //초기화
+$utilities: map-merge((
+
+	"btn-padding": ( // 기존 패딩 이름 바꿔주고 
+      responsive: true,
+      property: padding,
+      class: btnp, //클래스명 바꿔주고 
+      values: (
+				0: 0,
+				1: 0.2rem,
+				2: 0.4rem,
+				3: 0.6rem,
+				4: 0.8rem,
+				5: 1rem
+			)
+    ),
+		
+	"mk-font-size": ( 
+      responsive: true,
+      property: font-size,
+      class: mkfs, 
+      values: (
+				0: 0,
+				1: 0.6rem,
+				2: 0.8rem,
+				3: 1rem,
+				4: 1.4rem,
+				5: 2rem
+			)
+    ),
+), $utilities);
+
